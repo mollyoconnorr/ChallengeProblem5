@@ -24,6 +24,8 @@ public class Split2015 {
      *                     cannot be written
      */
     public static void main(String[] args) throws IOException {
+        System.out.println("Starting CSV split...");
+
         // Run this from ChallengeProblem5 folder so the paths work.
         String inputFile = "files/2015.csv";
         String institutionFile = "files/Institutions.csv";
@@ -122,6 +124,8 @@ public class Split2015 {
         reader.close();
         instWriter.close();
         teamWriter.close();
+
+        System.out.println("Done. Created " + institutionFile + " and " + teamFile + ".");
     }
 
     /**
