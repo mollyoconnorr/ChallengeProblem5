@@ -23,7 +23,7 @@ public class Split2015 {
      * @throws IOException if the input file cannot be read or the output files
      *                     cannot be written
      */
-    public static void main(String[] args) throws IOException {
+    static void main(String[] args) throws IOException {
         System.out.println("Starting CSV split...");
 
         // Run this from ChallengeProblem5 folder so the paths work.
@@ -88,7 +88,7 @@ public class Split2015 {
             if (id == null) {
                 id = institutionIds.size() + 1;
                 institutionIds.put(institution, id);
-                institutionRows.add(new String[] {
+                institutionRows.add(new String[]{
                         String.valueOf(id),
                         institution,
                         city,
@@ -98,7 +98,7 @@ public class Split2015 {
             }
 
             // Every team row points back to the institution ID we just found.
-            teamRows.add(new String[] {
+            teamRows.add(new String[]{
                     parts[teamIndex].trim(),
                     parts[advisorIndex].trim(),
                     parts[problemIndex].trim(),
@@ -173,7 +173,7 @@ public class Split2015 {
      * Writes a single CSV row to the given writer.
      *
      * @param writer the output writer
-     * @param row the fields to write
+     * @param row    the fields to write
      * @throws IOException if the row cannot be written
      */
     private static void writeRow(BufferedWriter writer, String[] row) throws IOException {
