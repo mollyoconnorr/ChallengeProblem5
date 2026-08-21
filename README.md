@@ -1,4 +1,4 @@
-# Challenge Problem 5
+# Contest Data Normalizer
 
 This challenge is about preparing data for import into a SQL database.
 
